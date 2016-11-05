@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html manifest="application.appcache">
+<head>
+	<script src="./js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Resorts</title>
+	
+	<script>
+		$(document).ready(function(){
+			$(function() {
+			   $("#BigMount").click(function(){
+					window.location.href = this.id + '.html';
+			   });
+			   
+			});
+			
+		   $(function() {
+			   $("#JumboMount").click(function(){
+					window.location.href = this.id + '.html';
+			   });
+			   
+			});
+		   $(function() {
+			   $("#LargeMount").click(function(){
+				  window.location.href = this.id + '.html';
+   
+			   });
+			   
+			});
+		   
+		   	console.log("yo");
+		 });
+		
+	var status = checkCacheStatus();
+    console.log(status);
+    loadDemo();
+	console.log("yo");
+    function checkCacheStatus() {
+    
+        var appCache = window.applicationCache;
+	
+        switch (appCache.status) {
+        case appCache.UNCACHED: // UNCACHED == 0
+            return 'UNCACHED';
+            break;
+        case appCache.IDLE: // IDLE == 1
+            return 'IDLE';
+            break;
+        case appCache.CHECKING: // CHECKING == 2
+            return 'CHECKING';
+            break;
+        case appCache.DOWNLOADING: // DOWNLOADING == 3
+            return 'DOWNLOADING';
+            break;
+        case appCache.UPDATEREADY:  // UPDATEREADY == 4
+            return 'UPDATEREADY';
+            break;
+        case appCache.OBSOLETE: // OBSOLETE == 5
+            return 'OBSOLETE';
+            break;
+        default:
+            return 'UKNOWN CACHE STATUS';
+            break;
+        };
+    
+    
+    }  
+        function loadDemo() {
+            if (navigator.onLine) {
+              console.log("load: Online");
+            } else {
+              console.log("load: Offline");
+            }
+            
+          }
+		  
+		// Now add event listeners to notify a change in online status
+       window.addEventListener("online", function(e) {
+          console.log("event: Online");
+        }, true);
+        window.addEventListener("offline", function(e) {
+          console.log("event: Offline");
+        }, true);
+		
+	</script>
+</head>
+
+<body>
+    
+    <div id="bg">
+		<img src="resort.jpg" alt="">
+	</div>
+    
+    
+    
+    <div id="page-wrap">
+        <h1 style="color:black;"> Local Resorts</h1>
+        
+        <p>
+        </p>
+        <div>
+			<div id="BigMount">
+            <h1>Big Mountain</h1>
+            <img src="b1.jpg">
+			</div>
+			
+			<div id="JumboMount">
+            <h1>Jumbo Mountain</h1>
+            <img src="b2.jpg">
+			</div>
+			
+			<div id="LargeMount">
+			<h1>Large Mountain</h1>
+            <img src="b3.jpg">
+			</div>
+        </div>
+    </div>
+
+
+    
+
+    
+
+
+</body>
+</html>
