@@ -29,13 +29,12 @@
 			   
 			});
 		   
-		   	console.log("yo");
+		   	localStorage['thispage'] = document.querySelector('html').innerHTML;
 		 });
 		
 	var status = checkCacheStatus();
     console.log(status);
     loadDemo();
-	console.log("yo");
     function checkCacheStatus() {
     
         var appCache = window.applicationCache;
