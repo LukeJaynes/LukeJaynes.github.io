@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 	<html manifest="application.appcache">
 <head>
-	<h1>Big</h1>
+	<script src="./js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="styles.css">
+	<script>
+			$(document).ready(function(){
+			$(function() {
+			   $("#return").click(function(){
+					window.location.href = 'index.html';
+			   });
+			   
+			});
+			
+		 });
+		</script>
 </head>
 
 <body>
+	
+	    <div id="bg">
+		<img src="resort.jpg" alt="">
+	</div>
+    
+    
+    
+    <div id="page-wrap">
+        <h1 style="color:black;"> Big Mountain Resort</h1>
+        
+        <p>
+        </p>
+        <div>
+			
+			<div id="BigMount">
+            <img src="b1.jpg">
+			</div>
+			
+			<div>
+				<p>Location: Montana</p>
+				<p>Average Snowfall: 210 inches</p>
+				<p>Ticket Price: $65</p>
+				<p>Phone Number: 555-343-5466</p>
+			</div>
+			
+			<div>
+				<button id="return">Home</button>
+			</div>
+			
+			</div>
+        </div>
+    </div>
+
+
+    
 	
 </body>
 	</html>

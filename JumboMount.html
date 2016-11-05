@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 	<html manifest="application.appcache">
 <head>
-	<h1>Jumbo</h1>
+	<script src="./js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="styles.css">
+	<script>
+			$(document).ready(function(){
+			$(function() {
+			   $("#return").click(function(){
+					window.location.href = 'index.html';
+			   });
+			   
+			});
+			
+		 });
+		</script>
 </head>
 
 <body>
+	
+	    <div id="bg">
+		<img src="resort.jpg" alt="">
+	</div>
+    
+    
+    
+    <div id="page-wrap">
+        <h1 style="color:black;"> Jumbo Mountain Resort</h1>
+        
+        <p>
+        </p>
+        <div>
+			
+			<div id="JumboMount">
+            <img src="b2.jpg">
+			</div>
+			
+			<div>
+				<p>Location: Canada</p>
+				<p>Average Snowfall: 200 inches</p>
+				<p>Ticket Price: $85</p>
+				<p>Phone Number: 555-123-3452</p>
+			</div>
+			
+			<div>
+				<button id="return">Home</button>
+			</div>
+			
+			</div>
+        </div>
+    </div>
+
+
+    
 	
 </body>
 	</html>
